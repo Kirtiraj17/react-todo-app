@@ -1,6 +1,6 @@
 function Todos() {
   return (
-    <div>Todos</div>
+    <div className="todos">Todos</div>
   )
 }
 
