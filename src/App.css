@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.header {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-task {
+  padding: 10px 20px;
+  border: 1px solid #646FF0;
+  border-radius: 5px;
+  background-color: #646FF0;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all .1s ease-in;
+}
+
+.add-task:hover {
+  background-color: transparent;
+  color: #646FF0;
+}
+
+.select-task {
+  padding: 10px 20px;
+  border: 1px solid #cccdde;
+  border-radius: 5px;
+  background-color: #cccdde;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.select-task option {
+  font-weight: bold;
+}

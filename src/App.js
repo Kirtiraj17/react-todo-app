@@ -1,7 +1,15 @@
+import './App.css';
+import Header from './components/Header';
+import Todos from './components/Todos';
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello World!</h1>
+      <div className="wrapper">
+        <h1>TODO LIST</h1>
+        <Header />
+        <Todos />
+      </div>
     </div>
   );
 }
