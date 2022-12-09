@@ -1,0 +1,144 @@
+.App {
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.header {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-task {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: 1px solid #646FF0;
+  border-radius: 5px;
+  background-color: #646FF0;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all .3s ease;
+}
+
+.add-task:hover {
+  background-color: transparent;
+  color: #646FF0;
+}
+
+.select-task {
+  padding: 10px 20px;
+  border: 1px solid #cccdde;
+  border-radius: 5px;
+  background-color: #cccdde;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.select-task * {
+  padding: 10px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.todos {
+  margin: 10px 0;
+  padding: 25px;
+  border-radius: 5px;
+  background-color: #eee;
+}
+
+.modal-wrapper {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.cross-btn {
+  position: absolute;
+  top: -10px;
+  align-items: center;
+  background-color: #ecedf6;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  font-size: 24px;
+  justify-content: center;
+  padding: 6px 15px;
+  right: 0;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  transition: all .3s ease;
+}
+
+.cross-btn:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.add-task-modal {
+  width: 90%;
+  background-color: #ecedf6;
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 450px;
+  padding: 2rem;
+  position: relative;
+  text-align: left;
+}
+
+.add-task-modal h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.title-div,
+.status-div { margin: 15px 0; }
+
+.modal-buttons { margin-top: 30px; }
+
+.title,
+.status {
+  width: -webkit-fill-available;
+  margin-top: 8px;
+  background-color: #fff;
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+}
+
+form label {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  border: 1px solid #cccdde;
+  border-radius: 5px;
+  background-color: #cccdde;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all .1s ease-in;
+}
+
+.cancel-btn:hover {
+  background-color: #aaa;
+}
