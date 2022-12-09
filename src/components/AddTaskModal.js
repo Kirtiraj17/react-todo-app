@@ -1,10 +1,11 @@
 import React from 'react'
 
-function AddTaskModal() {
+function AddTaskModal({onClick}) {
+
   return (
     <div className="modal-wrapper">
       <div className="add-task-modal">
-        <div className="cross-btn">X</div>
+        <div className="cross-btn" onClick={onClick}>X</div>
         <form action="">
           <h2>Add TODO</h2>
           <div className="title-div">

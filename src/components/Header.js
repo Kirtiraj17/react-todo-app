@@ -1,12 +1,17 @@
 import React from "react";
 import AddTaskButton from './AddTaskButton';
 
-function Header() {
+function Header({onClick}) {
+
+  // const openModal = () => {
+  //   setIsModalOpen(isModalOpen => !isModalOpen);
+  //   // console.log(isModalOpen);
+  // }
 
   return (
     <div className="header">
       {/* <button className="add-task">Add Task</button> */}
-      <AddTaskButton />
+      <AddTaskButton onClick={onClick} />
       <select className="select-task">
         <option value="all">All</option>
         <option value="incomplete">Incomplete</option>

@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 
-function AddTaskButton() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(prevIsModalOpen => !isModalOpen);
-    console.log(isModalOpen);
-  }
+function AddTaskButton({onClick}) {
+  // const openModal = () => {
+  //   setIsModalOpen(prevIsModalOpen => !isModalOpen);
+  //   console.log(isModalOpen);
+  // }
 
   return (
     <div>
       <button 
         className="add-task"
-        onClick={ openModal/* () => { setIsModalOpen(prevIsModalOpen => !isModalOpen) } */ }
+        onClick={ onClick }
       >
         Add Task
       </button>
