@@ -142,3 +142,39 @@ form label {
 .cancel-btn:hover {
   background-color: #aaa;
 }
+
+.todos ul {
+  margin: 0;
+  padding: 0;
+}
+
+.todos li {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.todos li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.todo-item-div {
+  display: flex;
+}
+
+.todo-item {
+  margin-left: 5px;
+}
+
+.action-btns input {
+  margin-left: 10px;
+}
+
+.todos span {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #DEDFE1;
+}

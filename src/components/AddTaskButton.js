@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-function AddTaskButton({onClick}) {
+function AddTaskButton({ onClick }) {
   // const openModal = () => {
   //   setIsModalOpen(prevIsModalOpen => !isModalOpen);
   //   console.log(isModalOpen);
@@ -8,14 +8,11 @@ function AddTaskButton({onClick}) {
 
   return (
     <div>
-      <button 
-        className="add-task"
-        onClick={ onClick }
-      >
+      <button className="add-task" onClick={onClick}>
         Add Task
       </button>
     </div>
-  )
+  );
 }
 
 export default AddTaskButton;

@@ -1,8 +1,7 @@
 import React from "react";
-import AddTaskButton from './AddTaskButton';
+import AddTaskButton from "./AddTaskButton";
 
-function Header({onClick}) {
-
+function Header({ onClick }) {
   // const openModal = () => {
   //   setIsModalOpen(isModalOpen => !isModalOpen);
   //   // console.log(isModalOpen);
@@ -18,7 +17,7 @@ function Header({onClick}) {
         <option value="complete">Complete</option>
       </select>
     </div>
-  )
+  );
 }
 
 export default Header;
