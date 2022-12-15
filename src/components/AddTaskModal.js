@@ -37,7 +37,7 @@ function AddTaskModal({ onClick, isModalOpen, setAllTodos, todo, setTodo }) {
     }
     return error;
   };
-  console.log(validateForm());
+  // console.log(validateForm());
 
   // Handle Form submit
   const submitHandler = (e) => {

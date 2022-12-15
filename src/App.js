@@ -7,22 +7,22 @@ import AddTaskModal from "./components/AddTaskModal";
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [allTodos, setAllTodos] = useState([]);
-  console.log(allTodos);
+  // console.log(allTodos);
 
   const [todo, setTodo] = useState({
     title: "",
     status: "incomplete",
   });
-  // console.log(todo)
+
+  const [select, setSelect] = useState("all");
 
   const openModal = () => {
     setIsModalOpen((isModalOpen) => !isModalOpen);
-    // console.log(isModalOpen);
+    setTodo({ title: "", status: "incomplete" });
   };
 
   const handleDelete = (index) => {
     setAllTodos(allTodos.filter((_, i) => i !== index));
-    // console.log("delete");
   };
 
   const handleEdit = (index) => {
@@ -35,11 +35,13 @@ function App() {
     <div className="App">
       <div className="wrapper">
         <h1>TODO LIST</h1>
-        <Header onClick={openModal} />
+        <Header onClick={openModal} select={select} setSelect={setSelect} />
         <Todos
           allTodos={allTodos}
           handleDelete={handleDelete}
           handleEdit={handleEdit}
+          select={select}
+          setSelect={setSelect}
         />
         {isModalOpen && (
           <AddTaskModal
