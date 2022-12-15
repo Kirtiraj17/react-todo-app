@@ -1,7 +1,4 @@
-function Todos({ allTodos, handleDelete, handleEdit, select }) {
-  // handleDelete item function in list containing button in react?
-  //onclick of delete button, delete that item?
-
+function Todos({ allTodos, handleDelete, handleEdit, select, handleCheck }) {
   return (
     <div className="todos">
       <ul>
@@ -16,6 +13,7 @@ function Todos({ allTodos, handleDelete, handleEdit, select }) {
                       type="checkbox"
                       id="task-check"
                       checked={checked}
+                      onChange={() => handleCheck(index)}
                     />
                   </label>
                   <div className={`todo-item ${checked && "checked"}`}>
@@ -38,7 +36,7 @@ function Todos({ allTodos, handleDelete, handleEdit, select }) {
                 </div>
               </li>
             );
-          } else if (select === 'all') {
+          } else if (select === "all") {
             return (
               <li key={index}>
                 <div className="todo-item-div">
@@ -47,6 +45,7 @@ function Todos({ allTodos, handleDelete, handleEdit, select }) {
                       type="checkbox"
                       id="task-check"
                       checked={checked}
+                      onChange={() => handleCheck(index)}
                     />
                   </label>
                   <div className={`todo-item ${checked && "checked"}`}>

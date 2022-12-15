@@ -31,6 +31,10 @@ function App() {
     // console.log("edit", allTodos[index]);
   };
 
+  const handleCheck = () => {
+    console.log("checked");
+  };
+
   return (
     <div className="App">
       <div className="wrapper">
@@ -41,6 +45,7 @@ function App() {
           handleDelete={handleDelete}
           handleEdit={handleEdit}
           select={select}
+          handleCheck={handleCheck}
         />
         {isModalOpen && (
           <AddTaskModal
