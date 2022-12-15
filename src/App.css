@@ -142,3 +142,46 @@ form label {
 .cancel-btn:hover {
   background-color: #aaa;
 }
+
+.todos ul {
+  margin: 0;
+  padding: 0;
+}
+
+.todos li {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.todos li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.todo-item-div {
+  width: 80%;
+  display: flex;
+  text-align: left;
+}
+
+.todo-item {
+  margin-left: 5px;
+}
+
+.todo-item.checked {
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+.action-btns button {
+  margin-left: 10px;
+}
+
+.todos span {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #DEDFE1;
+}
