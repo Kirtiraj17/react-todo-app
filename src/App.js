@@ -28,20 +28,19 @@ function App() {
   const handleEdit = (index) => {
     openModal();
     setTodo(allTodos[index]);
-    console.log("edit", allTodos[index]);
+    // console.log("edit", allTodos[index]);
   };
 
   return (
     <div className="App">
       <div className="wrapper">
         <h1>TODO LIST</h1>
-        <Header onClick={openModal} select={select} setSelect={setSelect} />
+        <Header onClick={openModal} setSelect={setSelect} />
         <Todos
           allTodos={allTodos}
           handleDelete={handleDelete}
           handleEdit={handleEdit}
           select={select}
-          setSelect={setSelect}
         />
         {isModalOpen && (
           <AddTaskModal
