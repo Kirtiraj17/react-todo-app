@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-function AddTaskModal({ onClick, isModalOpen, setAllTodos, todo, setTodo }) {
+function AddTaskModal({ onClick, isModalOpen, setAllTodos, todo, setTodo, editIndex, setEditIndex }) {
   const [error, setError] = useState({});
 
   const ref = useRef(null);
@@ -44,10 +44,18 @@ function AddTaskModal({ onClick, isModalOpen, setAllTodos, todo, setTodo }) {
     e.preventDefault();
     const valid = validateForm();
     if (Object.keys(valid).length === 0) {
-      setAllTodos((prevAllTodo) => [...prevAllTodo, todo]);
-      setError({});
-      onClick();
-      setTodo({ title: "", status: "incomplete" });
+      if(editIndex || editIndex === 0) {
+        setAllTodos((allTodos)=>[...allTodos.filter((_, i) => i !== editIndex),todo]);
+        setError({});
+        onClick();
+        setTodo({ title: "", status: "incomplete" });
+        setEditIndex(null);
+      } else {
+        setAllTodos((prevAllTodo) => [...prevAllTodo, todo]);
+        setError({});
+        onClick();
+        setTodo({ title: "", status: "incomplete" });
+      }
     } else {
       setError(valid);
     }

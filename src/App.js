@@ -15,6 +15,7 @@ function App() {
   });
 
   const [select, setSelect] = useState("all");
+  const [editIndex, setEditIndex] = useState();
 
   const openModal = () => {
     setIsModalOpen((isModalOpen) => !isModalOpen);
@@ -25,14 +26,15 @@ function App() {
     setAllTodos(allTodos.filter((_, i) => i !== index));
   };
 
-  const handleEdit = (index) => {
+  const handleEdit = (editIndex) => {
     openModal();
-    setTodo(allTodos[index]);
-    // console.log("edit", allTodos[index]);
+    setTodo(allTodos[editIndex]);
+    setEditIndex(editIndex);
+    // console.log("edit", allTodos[editIndex]);
   };
 
-  const handleCheck = () => {
-    console.log("checked");
+  const handleCheck = (index) => {
+    console.log("checked", index);
   };
 
   return (
@@ -54,6 +56,7 @@ function App() {
             setAllTodos={setAllTodos}
             todo={todo}
             setTodo={setTodo}
+            editIndex={editIndex}
           />
         )}
       </div>
