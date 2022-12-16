@@ -1,9 +1,17 @@
-function Todos({ allTodos, handleDelete, handleEdit, select, handleCheck }) {
+function Todos({
+  allTodos,
+  handleDelete,
+  handleEdit,
+  select,
+  handleCheck,
+  isChecked,
+  setIsChecked,
+}) {
   return (
     <div className="todos">
       <ul>
         {allTodos.map((todo, index) => {
-          const checked = todo.status === "complete" ? true : false;
+          // const checked = todo.status === "complete" ? true : false;
           if (select === todo.status) {
             return (
               <li key={index}>
@@ -12,11 +20,11 @@ function Todos({ allTodos, handleDelete, handleEdit, select, handleCheck }) {
                     <input
                       type="checkbox"
                       id="task-check"
-                      checked={checked}
-                      onChange={() => handleCheck(index)}
+                      checked={todo.status === "complete" ? true : false}
+                      onChange={(event) => handleCheck(event, index)}
                     />
                   </label>
-                  <div className={`todo-item ${checked && "checked"}`}>
+                  <div className={`todo-item${isChecked ? " checked" : ""}`}>
                     {todo.title}
                   </div>
                 </div>
@@ -44,11 +52,11 @@ function Todos({ allTodos, handleDelete, handleEdit, select, handleCheck }) {
                     <input
                       type="checkbox"
                       id="task-check"
-                      checked={checked}
-                      onChange={() => handleCheck(index)}
+                      checked={todo.status === "complete" ? true : false}
+                      onChange={(event) => handleCheck(event, index)}
                     />
                   </label>
-                  <div className={`todo-item ${checked && "checked"}`}>
+                  <div className={`todo-item${isChecked ? " checked" : ""}`}>
                     {todo.title}
                   </div>
                 </div>

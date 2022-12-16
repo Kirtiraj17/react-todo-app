@@ -17,6 +17,8 @@ function App() {
   const [select, setSelect] = useState("all");
   const [editIndex, setEditIndex] = useState();
 
+  const [isChecked, setIsChecked] = useState(false);
+
   const openModal = () => {
     setIsModalOpen((isModalOpen) => !isModalOpen);
     setTodo({ title: "", status: "incomplete" });
@@ -33,9 +35,22 @@ function App() {
     // console.log("edit", allTodos[editIndex]);
   };
 
-  const handleCheck = (index) => {
-    console.log("checked", index);
+  const handleCheck = (event, index) => {
+    // let check = event.target.checked;
+    // setIsChecked(check);
+    setIsChecked(isChecked => !isChecked);
+    // const newTodoList = allTodos.map((item) => {
+    //   if(item.index === index) {
+    //     return {...Todos, }
+    //   }
+    // })
+    // setTodo({ ...allTodos[index], status: event.target.checked ? "complete" : "incomplete" });
+    // setAllTodos((allTodos)=>[...allTodos.filter((_, i) => i !== index),todo]);
+    // setAllTodos({ ...allTodos[index], status: event.target.checked ? "complete" : "incomplete" })
   };
+  console.log("checked", isChecked, todo);
+
+  //how can we manage single state for multiple list items in react?
 
   return (
     <div className="App">
@@ -48,6 +63,8 @@ function App() {
           handleEdit={handleEdit}
           select={select}
           handleCheck={handleCheck}
+          isChecked={isChecked}
+          setIsChecked={setIsChecked}
         />
         {isModalOpen && (
           <AddTaskModal
